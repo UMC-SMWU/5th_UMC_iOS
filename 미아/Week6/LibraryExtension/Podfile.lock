@@ -1,0 +1,20 @@
+PODS:
+  - lottie-ios (4.3.3)
+  - Pastel (0.6.0)
+
+DEPENDENCIES:
+  - lottie-ios
+  - Pastel
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - Pastel
+
+SPEC CHECKSUMS:
+  lottie-ios: 25e7b2675dad5c3ddad369ac9baab03560c5bfdd
+  Pastel: 814f081efbe2859c37e65ee44f396e6e5be88619
+
+PODFILE CHECKSUM: 2605136d086d9d2a420be9992328c0b80696e136
+
+COCOAPODS: 1.11.3
