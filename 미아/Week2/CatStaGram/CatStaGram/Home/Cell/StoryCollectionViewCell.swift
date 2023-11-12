@@ -20,6 +20,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
         viewUserProfileBackground.layer.cornerRadius = 20.5
         imageViewUserProfile.layer.cornerRadius = 19.5
         imageViewUserProfile.clipsToBounds = true
+        
         // Initialization code
     }
 
