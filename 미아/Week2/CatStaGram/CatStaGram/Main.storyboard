@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uip-09-wOs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q1C-ra-1jv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -353,33 +353,58 @@
             </objects>
             <point key="canvasLocation" x="1527.4809160305342" y="-28.169014084507044"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="2No-X4-ZAe">
             <objects>
-                <viewController id="jVn-q4-99E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="jVn-q4-99E" customClass="ProfileViewController" customModule="CatStaGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XG8-YF-smq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gY-9H-0OI">
-                                <rect key="frame" x="155.66666666666666" y="408" width="82" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J7R-v9-RFE">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e9l-Aj-742">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tQH-w2-Jva"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4gY-9H-0OI" firstAttribute="centerY" secondItem="XG8-YF-smq" secondAttribute="centerY" id="RbU-0T-f5U"/>
-                            <constraint firstItem="4gY-9H-0OI" firstAttribute="centerX" secondItem="XG8-YF-smq" secondAttribute="centerX" id="wmy-hS-fUa"/>
+                            <constraint firstItem="tQH-w2-Jva" firstAttribute="trailing" secondItem="J7R-v9-RFE" secondAttribute="trailing" id="3BN-IE-2pa"/>
+                            <constraint firstItem="tQH-w2-Jva" firstAttribute="bottom" secondItem="J7R-v9-RFE" secondAttribute="bottom" id="Hcm-g9-6BT"/>
+                            <constraint firstItem="J7R-v9-RFE" firstAttribute="leading" secondItem="tQH-w2-Jva" secondAttribute="leading" id="PAh-lY-7vl"/>
+                            <constraint firstItem="J7R-v9-RFE" firstAttribute="top" secondItem="tQH-w2-Jva" secondAttribute="top" id="Qc2-M4-0Lk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="CbA-ua-xnM"/>
+                    <navigationItem key="navigationItem" id="hxb-0u-UUQ">
+                        <barButtonItem key="leftBarButtonItem" title="Nickname" id="iFV-17-rsD">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="YUY-qs-RGf"/>
+                        </centerItemGroups>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="line.3.horizontal" catalog="system" id="jsG-Zw-8NL">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem image="plus.app" catalog="system" id="O83-6h-wFg">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileCollectionView" destination="J7R-v9-RFE" id="WiS-2k-FUu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwx-3Z-XnA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1527" y="1322"/>
+            <point key="canvasLocation" x="2452.6717557251909" y="1321.8309859154931"/>
         </scene>
         <!--Home-->
         <scene sceneID="Jcf-g1-oWC">
@@ -487,7 +512,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Uip-09-wOs" kind="relationship" relationship="viewControllers" id="FWn-rF-fpv"/>
-                        <segue destination="jVn-q4-99E" kind="relationship" relationship="viewControllers" id="ht2-ky-HaL"/>
+                        <segue destination="c7s-gW-Xev" kind="relationship" relationship="viewControllers" id="ht2-ky-HaL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNx-kn-ewJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -512,6 +537,25 @@
             </objects>
             <point key="canvasLocation" x="137" y="-28"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="OZC-Us-h8f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c7s-gW-Xev" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="CbA-ua-xnM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AjW-Y7-0as">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jVn-q4-99E" kind="relationship" relationship="rootViewController" id="YLT-J9-RQa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcf-bl-CMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525.9541984732823" y="1321.8309859154931"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
@@ -520,6 +564,8 @@
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
