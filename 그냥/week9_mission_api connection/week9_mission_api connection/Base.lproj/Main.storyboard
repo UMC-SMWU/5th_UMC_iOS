@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week9_mission_api_connection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk4-ev-Vw3">
+                                <rect key="frame" x="0.0" y="74" width="393" height="612"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API를 연결해보세요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="17" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJw-pS-tpQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="612"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cJw-pS-tpQ" firstAttribute="centerY" secondItem="Fk4-ev-Vw3" secondAttribute="centerY" id="2gW-BJ-nb9"/>
+                                    <constraint firstItem="cJw-pS-tpQ" firstAttribute="leading" secondItem="Oo5-2z-BEp" secondAttribute="leading" id="5nj-8a-2BR"/>
+                                    <constraint firstItem="cJw-pS-tpQ" firstAttribute="top" secondItem="Oo5-2z-BEp" secondAttribute="top" id="ULg-su-wnY"/>
+                                    <constraint firstItem="Oo5-2z-BEp" firstAttribute="trailing" secondItem="cJw-pS-tpQ" secondAttribute="trailing" id="YQe-cR-KOq"/>
+                                    <constraint firstItem="cJw-pS-tpQ" firstAttribute="centerX" secondItem="Fk4-ev-Vw3" secondAttribute="centerX" id="dlT-hv-a1O"/>
+                                    <constraint firstAttribute="height" constant="612" id="hf8-3O-Bwm"/>
+                                    <constraint firstItem="Oo5-2z-BEp" firstAttribute="bottom" secondItem="cJw-pS-tpQ" secondAttribute="bottom" id="m2r-2x-iaY"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="38e-j3-Xgd"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Oo5-2z-BEp"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c3-1l-8Bi">
+                                <rect key="frame" x="116.00000000000001" y="694" width="161.33333333333337" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="brH-R4-9Sw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="따릉이 API 연결하기"/>
+                                <connections>
+                                    <action selector="ButtonAPIConnection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iR4-UE-ztE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arE-8D-OmR">
+                                <rect key="frame" x="127" y="759" width="138" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="OS6-sz-OWn"/>
+                                </constraints>
+                                <color key="tintColor" red="0.3686274886" green="0.74509805439999999" blue="0.73333334920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="결과 확인하기"/>
+                                <connections>
+                                    <action selector="complete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFQ-gZ-1TS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="arE-8D-OmR" firstAttribute="top" secondItem="4c3-1l-8Bi" secondAttribute="bottom" constant="8" id="2Fc-xT-3Fd"/>
+                            <constraint firstItem="Fk4-ev-Vw3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2zM-s9-aai"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="arE-8D-OmR" secondAttribute="bottom" constant="-2" id="LBm-7v-OlE"/>
+                            <constraint firstItem="arE-8D-OmR" firstAttribute="centerX" secondItem="4c3-1l-8Bi" secondAttribute="centerX" id="Rif-r0-jXK"/>
+                            <constraint firstItem="Fk4-ev-Vw3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eIy-Kr-hmj"/>
+                            <constraint firstItem="Fk4-ev-Vw3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gte-Tj-xZl"/>
+                            <constraint firstItem="4c3-1l-8Bi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n7H-QN-3Fz"/>
+                            <constraint firstItem="arE-8D-OmR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="qoc-aG-R4N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LabelOfBicycle" destination="cJw-pS-tpQ" id="wNL-yh-zMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14.503816793893129" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
