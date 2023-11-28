@@ -23,6 +23,10 @@
 		B39582242AF89CFC00432FFE /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39582222AF89CFC00432FFE /* StoryTableViewCell.xib */; };
 		B39582272AF8DD3F00432FFE /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39582252AF8DD3E00432FFE /* StoryCollectionViewCell.swift */; };
 		B39582282AF8DD3F00432FFE /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39582262AF8DD3E00432FFE /* StoryCollectionViewCell.xib */; };
+		B39E091D2B161BDE003317F0 /* FeedUploadInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E091C2B161BDE003317F0 /* FeedUploadInput.swift */; };
+		B3BF47282B149F990002F7B9 /* FeedDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BF47272B149F990002F7B9 /* FeedDataInput.swift */; };
+		B3BF472A2B14A32C0002F7B9 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BF47292B14A32C0002F7B9 /* FeedModel.swift */; };
+		B3BF472C2B14A3560002F7B9 /* FeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BF472B2B14A3560002F7B9 /* FeedDataManager.swift */; };
 		B3CC38F52B0228D3006D80CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC38F42B0228D3006D80CF /* ProfileViewController.swift */; };
 		B3F2DFEC2ADBAB7C000D7E3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2DFEB2ADBAB7C000D7E3D /* HomeViewController.swift */; };
 		B3F2DFF02ADBAE21000D7E3D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2DFEE2ADBAE21000D7E3D /* FeedTableViewCell.swift */; };
@@ -52,6 +56,10 @@
 		B39582222AF89CFC00432FFE /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 		B39582252AF8DD3E00432FFE /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B39582262AF8DD3E00432FFE /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		B39E091C2B161BDE003317F0 /* FeedUploadInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadInput.swift; sourceTree = "<group>"; };
+		B3BF47272B149F990002F7B9 /* FeedDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataInput.swift; sourceTree = "<group>"; };
+		B3BF47292B14A32C0002F7B9 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		B3BF472B2B14A3560002F7B9 /* FeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataManager.swift; sourceTree = "<group>"; };
 		B3CC38F42B0228D3006D80CF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B3F2DFEB2ADBAB7C000D7E3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B3F2DFEE2ADBAE21000D7E3D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +147,24 @@
 			path = CatStaGram;
 			sourceTree = "<group>";
 		};
+		B39E091B2B161BB9003317F0 /* FeedUploadDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B39E091C2B161BDE003317F0 /* FeedUploadInput.swift */,
+			);
+			path = FeedUploadDataManager;
+			sourceTree = "<group>";
+		};
+		B3BF47262B149F4D0002F7B9 /* FeedDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B3BF47272B149F990002F7B9 /* FeedDataInput.swift */,
+				B3BF47292B14A32C0002F7B9 /* FeedModel.swift */,
+				B3BF472B2B14A3560002F7B9 /* FeedDataManager.swift */,
+			);
+			path = FeedDataManager;
+			sourceTree = "<group>";
+		};
 		B3CC38F32B02289A006D80CF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +177,8 @@
 		B3F2DFEA2ADBAB5D000D7E3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B39E091B2B161BB9003317F0 /* FeedUploadDataManager */,
+				B3BF47262B149F4D0002F7B9 /* FeedDataManager */,
 				B3F2DFED2ADBADFA000D7E3D /* Cell */,
 				B3F2DFEB2ADBAB7C000D7E3D /* HomeViewController.swift */,
 			);
@@ -184,7 +212,6 @@
 				1C8A7A7B4A75FFF6DC45D5DB /* Pods-CatStaGram.debug.xcconfig */,
 				AB1D678319DA6381E9EE8C6C /* Pods-CatStaGram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -313,15 +340,19 @@
 				B39582272AF8DD3F00432FFE /* StoryCollectionViewCell.swift in Sources */,
 				B3F51FB52AC1517800A975CD /* UIViewController+Extension.swift in Sources */,
 				B3F2DFEC2ADBAB7C000D7E3D /* HomeViewController.swift in Sources */,
+				B39E091D2B161BDE003317F0 /* FeedUploadInput.swift in Sources */,
 				B37982842AB9C5530090FDE5 /* SceneDelegate.swift in Sources */,
 				B3CC38F52B0228D3006D80CF /* ProfileViewController.swift in Sources */,
 				B3F51FB32AC150B000A975CD /* UIView+Extension.swift in Sources */,
 				B31FB9362B0A30EF003AD619 /* ProfileCollectionViewCell.swift in Sources */,
 				B3F51FB72AC15D8400A975CD /* UserInfo.swift in Sources */,
 				B3F2DFF02ADBAE21000D7E3D /* FeedTableViewCell.swift in Sources */,
+				B3BF472C2B14A3560002F7B9 /* FeedDataManager.swift in Sources */,
+				B3BF47282B149F990002F7B9 /* FeedDataInput.swift in Sources */,
 				B379829A2AB9E1BC0090FDE5 /* RegisterViewController.swift in Sources */,
 				B31FB93C2B0A44FD003AD619 /* PostCollectionViewCell.swift in Sources */,
 				B39582232AF89CFC00432FFE /* StoryTableViewCell.swift in Sources */,
+				B3BF472A2B14A32C0002F7B9 /* FeedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 85KHKQ87T4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatStaGram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -496,6 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 85KHKQ87T4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatStaGram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
