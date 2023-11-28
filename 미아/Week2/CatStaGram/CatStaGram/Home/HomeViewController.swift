@@ -6,10 +6,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func buttonOnAlbum(_ sender: Any) {
+        self.imagePickerViewController.sourceType = .photoLibrary
+        self.present(imagePickerViewController, animated: true, completion: nil)
+    }
+    
+    var arrayCat : [FeedModel] = []
+    
+    let imagePickerViewController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +33,13 @@ class HomeViewController: UIViewController {
         
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
-        // Do any additional setup after loading the view.
+        
+        let input = FeedAPIInput(limit: 10, page: 0)
+        FeedDataManager().feedDataManager(input, self)
+        
+        imagePickerViewController.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -44,7 +47,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
     
     //한 섹션에 몇 개의 셀을 넣을 것이냐
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return arrayCat.count + 1
     }
     
     //어떤 셀을 보여줄 것이냐
@@ -58,8 +61,12 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as? FeedTableViewCell else {
                 return UITableViewCell()
                     }
-        cell.selectionStyle = .none
-        return cell
+            //구조체에서 String으로 보내야 하는데 파일이 image이므로 cashing 진행
+            if let urlString = arrayCat[indexPath.row - 1].url {
+                let url = URL(string: urlString)
+                cell.imageViewFeed.kf.setImage(with: url)
+            }
+            return cell
         }
     }
     
@@ -99,3 +106,18 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 
+extension HomeViewController {
+    func successAPI(_ result : [FeedModel]) {
+        arrayCat = result
+        tableView.reloadData()
+    }
+}
+
+extension HomeViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    //이미지를 선택 완료했을 때
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            print(image)
+        }
+    }
+}
