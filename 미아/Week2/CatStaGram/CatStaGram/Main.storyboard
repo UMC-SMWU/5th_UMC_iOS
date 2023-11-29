@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q1C-ra-1jv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gPe-eh-0Nd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="30" id="2tV-Gt-Jp8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="cdR-gL-2gE"/>
                                 </connections>
@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="30" id="JQr-Na-Q6o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <connections>
                                     <action selector="emailTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="i1A-9a-jY1"/>
                                 </connections>
@@ -236,25 +236,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="78T-EH-sOJ">
                                 <rect key="frame" x="15" y="428.33333333333326" width="363" height="187"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="휴대폰 번호 또는 이메일 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtU-D7-zfu">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtU-D7-zfu">
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="성명" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5M-2O-5LI">
                                         <rect key="frame" x="0.0" y="51" width="363" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-bS-N20">
                                         <rect key="frame" x="0.0" y="102.00000000000006" width="363" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXP-jz-p4q">
                                         <rect key="frame" x="0.0" y="153.00000000000006" width="363" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -341,7 +341,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="EmailTextField" destination="dtU-D7-zfu" id="lOI-5v-kox"/>
+                        <outlet property="emailTextField" destination="dtU-D7-zfu" id="9oh-bK-wzq"/>
                         <outlet property="nameTextField" destination="u5M-2O-5LI" id="9qo-Oh-sng"/>
                         <outlet property="nicknameTextField" destination="d3A-bS-N20" id="ngL-Fa-yyM"/>
                         <outlet property="passwordTextField" destination="HXP-jz-p4q" id="8LG-gs-mx8"/>
@@ -495,7 +495,7 @@
                             <constraint firstItem="shK-kG-8xz" firstAttribute="top" secondItem="sAA-XH-Aps" secondAttribute="top" id="w6L-MD-8mv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="NgX-cw-k9C"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="NgX-cw-k9C"/>
                     <connections>
                         <outlet property="tableView" destination="1RJ-wH-oPK" id="Azp-Qm-Y3D"/>
                     </connections>
@@ -503,6 +503,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1o-Nu-plH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137" y="1322"/>
+        </scene>
+        <!--릴스-->
+        <scene sceneID="spm-5k-hua">
+            <objects>
+                <viewController id="VTg-La-klV" customClass="ReelsViewController" customModule="CatStaGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tgo-GC-PL9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IWp-AU-mTl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oXt-j9-iBf">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bqO-5M-h7a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bqO-5M-h7a" firstAttribute="trailing" secondItem="IWp-AU-mTl" secondAttribute="trailing" id="SyH-xY-Vyx"/>
+                            <constraint firstItem="bqO-5M-h7a" firstAttribute="bottom" secondItem="IWp-AU-mTl" secondAttribute="bottom" id="cHK-xb-LEZ"/>
+                            <constraint firstItem="IWp-AU-mTl" firstAttribute="leading" secondItem="bqO-5M-h7a" secondAttribute="leading" id="ms8-gl-wtd"/>
+                            <constraint firstItem="IWp-AU-mTl" firstAttribute="top" secondItem="bqO-5M-h7a" secondAttribute="top" id="rPV-1d-Uxa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="릴스" image="video.bubble.left.fill" catalog="system" id="OIc-FM-fFz"/>
+                    <connections>
+                        <outlet property="collectionView" destination="IWp-AU-mTl" id="bfe-V3-rSy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PT5-6Z-EI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="1322"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Fk0-lK-Mxn">
@@ -512,9 +550,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Uip-09-wOs" kind="relationship" relationship="viewControllers" id="FWn-rF-fpv"/>
+                        <segue destination="VTg-La-klV" kind="relationship" relationship="viewControllers" id="Z0S-N0-OsU"/>
                         <segue destination="c7s-gW-Xev" kind="relationship" relationship="viewControllers" id="ht2-ky-HaL"/>
                     </connections>
                 </tabBarController>
@@ -544,7 +585,7 @@
         <scene sceneID="OZC-Us-h8f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c7s-gW-Xev" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="CbA-ua-xnM"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="CbA-ua-xnM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AjW-Y7-0as">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -563,14 +604,17 @@
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
+        <image name="video.bubble.left.fill" catalog="system" width="128" height="110"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DisabledButtonColor">
             <color red="0.77647058823529413" green="0.87058823529411766" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
