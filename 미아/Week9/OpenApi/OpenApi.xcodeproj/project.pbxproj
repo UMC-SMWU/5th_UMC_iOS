@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3BF47252B149A730002F7B9 /* KeyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3BF47242B149A730002F7B9 /* KeyList.plist */; };
 		B3C0CF822B0C5C8300C1E9D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C0CF812B0C5C8300C1E9D4 /* AppDelegate.swift */; };
 		B3C0CF842B0C5C8300C1E9D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C0CF832B0C5C8300C1E9D4 /* SceneDelegate.swift */; };
 		B3C0CF862B0C5C8300C1E9D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C0CF852B0C5C8300C1E9D4 /* ViewController.swift */; };
 		B3C0CF892B0C5C8300C1E9D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C0CF872B0C5C8300C1E9D4 /* Main.storyboard */; };
 		B3C0CF8B2B0C5C8A00C1E9D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C0CF8A2B0C5C8A00C1E9D4 /* Assets.xcassets */; };
 		B3C0CF8E2B0C5C8A00C1E9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C0CF8C2B0C5C8A00C1E9D4 /* LaunchScreen.storyboard */; };
-		B3C0CF962B0C7D1C00C1E9D4 /* KeyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C0CF952B0C7D1C00C1E9D4 /* KeyList.plist */; };
 		B3C0CF982B0CC21400C1E9D4 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C0CF972B0CC21400C1E9D4 /* Weather.swift */; };
 		B3C0CF9A2B0CC25000C1E9D4 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C0CF992B0CC25000C1E9D4 /* WeatherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3BF47242B149A730002F7B9 /* KeyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeyList.plist; sourceTree = "<group>"; };
 		B3C0CF7E2B0C5C8300C1E9D4 /* OpenApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C0CF812B0C5C8300C1E9D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C0CF832B0C5C8300C1E9D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		B3C0CF8A2B0C5C8A00C1E9D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3C0CF8D2B0C5C8A00C1E9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3C0CF8F2B0C5C8A00C1E9D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3C0CF952B0C7D1C00C1E9D4 /* KeyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeyList.plist; sourceTree = "<group>"; };
 		B3C0CF972B0CC21400C1E9D4 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		B3C0CF992B0CC25000C1E9D4 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +65,7 @@
 				B3C0CF812B0C5C8300C1E9D4 /* AppDelegate.swift */,
 				B3C0CF832B0C5C8300C1E9D4 /* SceneDelegate.swift */,
 				B3C0CF852B0C5C8300C1E9D4 /* ViewController.swift */,
-				B3C0CF952B0C7D1C00C1E9D4 /* KeyList.plist */,
+				B3BF47242B149A730002F7B9 /* KeyList.plist */,
 				B3C0CF872B0C5C8300C1E9D4 /* Main.storyboard */,
 				B3C0CF8A2B0C5C8A00C1E9D4 /* Assets.xcassets */,
 				B3C0CF8C2B0C5C8A00C1E9D4 /* LaunchScreen.storyboard */,
@@ -135,8 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C0CF8E2B0C5C8A00C1E9D4 /* LaunchScreen.storyboard in Resources */,
+				B3BF47252B149A730002F7B9 /* KeyList.plist in Resources */,
 				B3C0CF8B2B0C5C8A00C1E9D4 /* Assets.xcassets in Resources */,
-				B3C0CF962B0C7D1C00C1E9D4 /* KeyList.plist in Resources */,
 				B3C0CF892B0C5C8300C1E9D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
